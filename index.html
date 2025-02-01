@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -21,13 +27,55 @@
 
     <div class="container">
       <section id="welcome-section">
-        <img
-          src="./Pictures/My profile pic.jpg"
-          alt="Muhammad Nasir Abdulrahman"
-          class="profile-img"
-        />
-        <h1>Hi, I'm Muhammad Nasir Abdulrahman</h1>
-        <p>Front-End Web Developer</p>
+        <div class="home-content">
+          <div class="home-main">
+            <div class="text-content">
+              <h3>Hi, It's Me</h3>
+              <h1><em>Muhammad Nasir Abdulrahman</em></h1>
+              <h3>And I'm a <span class="text"></span></h3>
+              <p class="introduction">
+                I'm a passionate <em>Front-End Developer</em> with a keen eye
+                for creating responsive and user-friendly web experiences. With
+                strong foundation in modern web technologies, I transform design
+                concepts into seamless, interactive websites that engage users
+                and deliver results.
+              </p>
+            </div>
+            <div class="image">
+              <img
+                src="./Pictures/My profile pic.jpg"
+                alt="Muhammad Nasir Abdulrahman"
+                class="profile-img"
+              />
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <h4>HTML5</h4>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <h4>CSS3</h4>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <h4>JavaScript</h4>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-users"></i>
+                <h4>Team Work</h4>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-comments"></i>
+                <h4>Communication</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
@@ -39,7 +87,7 @@
               target="_blank"
             >
               <img
-                src="./Pictures/product-landing-page.png"
+                src="./Pictures/Product landing page.png"
                 alt="Product Landing Page Project"
               />
               <div class="project-info">
