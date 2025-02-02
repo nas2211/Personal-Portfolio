@@ -300,14 +300,26 @@ footer p {
 }
 
 .image {
-  flex: 1;
+  flex: 1.5; /* Increased flex ratio for larger image container */
   text-align: right;
+  padding: 2rem;
 }
 
 .image img {
-  max-width: 400px;
+  width: 75%;
+  height: auto;
+  aspect-ratio: 1/1; /* Maintains circle shape */
   border-radius: 50%;
-  animation: floatImage 4s ease-in-out infinite;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(100, 255, 218, 0.3);
 }
 
 .introduction {
@@ -406,7 +418,8 @@ footer p {
   }
 
   .image img {
-    max-width: 300px;
+    width: 75%;
+    height: auto;
   }
 
   .text-content h1 {
@@ -420,11 +433,65 @@ footer p {
   .introduction {
     font-size: 1.1rem;
   }
+
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
+    gap: 1rem; /* Reduce gap for mobile */
+    padding: 0 1rem;
+  }
+
+  .skill-item {
+    padding: 1rem;
+  }
+
+  .skill-item i {
+    font-size: 2rem;
+  }
+
+  #contacts {
+    padding: 2rem 1rem;
+  }
+
+  #contacts .social-links {
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Keep items in a single row */
+  }
+
+  #contacts a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: auto; /* Allow buttons to shrink */
+  }
 }
 
 @media screen and (max-width: 768px) {
   .project-tile img {
     height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image img {
+    width: 85%;
+    height: auto;
+  }
+
+  .skill-item {
+    padding: 0.8rem;
+  }
+
+  .skill-item i {
+    font-size: 1.8rem;
+  }
+
+  #contacts a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
